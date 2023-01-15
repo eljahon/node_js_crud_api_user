@@ -1,0 +1,76 @@
+{
+    "get": {
+        "summary": "getAll",
+        "description": "parameter id just for test",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "object",
+                  "example": {
+                 "data":[
+                        {
+                            "_id": "number",
+                            "first_name": "string",
+                            "last_name": "string",
+                            "age": "number",
+                            "job": "string",
+                            "interest": "string",
+                            "createdAt": "Date"
+                          }
+
+                      ],
+                      "total_count": "number"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "user create",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+              },
+              "example": {
+            
+    
+                    "first_name": "string",
+                    "last_name": "string",
+                    "age": "number",
+                    "job": "string",
+                    "interest": "string"
+            
+              }
+            }
+          }
+        },
+        "description": "parameter id just for test",
+        "responses": {
+          "200": {
+            "description": "user now create",
+            "responsesBody": {
+              "content": {
+                "example": {
+            
+    
+                  "first_name": "string",
+                  "last_name": "string",
+                  "age": "number",
+                  "job": "string",
+                  "interest": "string"
+          
+            }
+              }
+            }
+          }
+        }
+      }
+          
+        }

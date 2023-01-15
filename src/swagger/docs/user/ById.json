@@ -1,0 +1,116 @@
+{
+    
+    "get": {
+        "summary": "returns simple answer from get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "simple parameter",
+            "schema": {
+              "type": "string",
+              "example": "1"
+            }
+          }
+        ],
+        "description": "parameter id just for test",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "some text"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "summary" : "Update the tasks",
+        "description": "Update the tasks",
+        "summary": "user create",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+              },
+              "example": {
+            
+    
+                    "first_name": "string",
+                    "last_name": "string",
+                    "age": "number",
+                    "job": "string",
+                    "interest": "string"
+            
+              }
+            }
+          }
+        },
+        "parameters": [
+            {
+                "name": "id",
+                "in": "path",
+                "description": "task id that needs to be deleted",
+                "required": true,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "successful operation",
+                "requestBody": {
+                  "required": true,
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                      },
+                      "example": {
+                    
+            
+                            "first_name": "string",
+                            "last_name": "string",
+                            "age": "number",
+                            "job": "string",
+                            "interest": "string"
+                    
+                      }
+                    }
+                  }
+                }
+            },
+            "400": {
+                "description": "Invalid status value"
+            }
+        }
+    },
+   
+      "delete" : {
+          "summary" : "Delete the task",
+          "description": "Delete the task",
+          "produces": ["application/json"],
+          "parameters": [
+              {
+                  "name": "id",
+                  "in": "path",
+                  "description": "task id that needs to be deleted",
+                  "required": true,
+                  "type": "string"
+              }
+          ],
+          "responses": {
+              "200": {
+                  "description": "successful user delete"
+              },
+              "400": {
+                  "description": "Invalid id or not id status value"
+                  
+              }
+          }
+      }
+  }
